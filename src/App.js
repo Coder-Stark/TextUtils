@@ -24,15 +24,15 @@ function App() {
       setAlert(null);
     }, 1500);
   }
-  // const removeBodyClasses = ()=>{
-  //   document.body.classList.remove('bg-light');
-  //   document.body.classList.remove('bg-dark');
-  //   document.body.classList.remove('bg-warning');
-  //   document.body.classList.remove('bg-danger');
-  //   document.body.classList.remove('bg-success');
-  // }
+  const removeBodyClasses = ()=>{
+    document.body.classList.remove('bg-light');
+    document.body.classList.remove('bg-dark');
+    document.body.classList.remove('bg-warning');
+    document.body.classList.remove('bg-danger');
+    document.body.classList.remove('bg-success');
+  }
   const toggleMode = (cls)=>{
-    // removeBodyClasses();
+    removeBodyClasses();
     console.log(cls);
     document.body.classList.add('bg-'+ cls);
     if(mode === 'light'){
@@ -66,7 +66,7 @@ function App() {
         <Alert alert = {alert} />
 
         <div className="container my-3">
-        {/* <TextForm showAlert = {showAlert} heading = "Enter the text " mode = {mode}/>               JUST FOR GITHUB PAGES  */}
+        {/* <TextForm showAlert = {showAlert} heading = " Try TextUtils - Word Cunter | Charcter Counter | Lowercase to Uppercase | Uppercase to Lowercase | Remove Extra Spaces" mode = {mode}/>                */}
 
           <Routes>
             <Route exact path="/about" element = {<About  mode = {mode}/>} />
